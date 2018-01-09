@@ -1,0 +1,29 @@
+{
+    "name": "CoinMonkey/interfaces",
+    "description": "Interfaces for exchanges",
+    "keywords": ["crypto", "currency", "interfaces", "coinmonkey"],
+    "homepage": "https://coinmonkey.io",
+    "type": "library",
+    "license": "Apache",
+    "support": {
+        "source": "https://github.com/pistol88"
+    },
+    "authors": [
+        {
+            "name": "Ilya Pistol",
+            "email": "admin@coinmonkey.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "autoload": {
+        "psr-4": {
+            "coinmonkey\\interfaces\\": ""
+        }
+    },
+}
