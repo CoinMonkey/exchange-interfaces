@@ -1,10 +1,10 @@
 {
-    "name": "CoinMonkey/interfaces",
-    "description": "Interfaces for exchanges",
+    "name": "coinmonkey/exchange-interfaces",
+    "description": "Interfaces for cryptocurrency exchanges",
     "keywords": ["crypto", "currency", "interfaces", "coinmonkey"],
     "homepage": "https://coinmonkey.io",
     "type": "library",
-    "license": "Apache",
+    license": "Apache-2.0",
     "support": {
         "source": "https://github.com/pistol88"
     },
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "coinmonkey\\interfaces\\": ""
+            "coinmonkey\\interfaces\\": "src\\"
         }
-    },
+    }
 }
