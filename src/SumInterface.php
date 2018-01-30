@@ -2,9 +2,9 @@
 
 namespace coinmonkey\interfaces;
 
-interface SumInterface
+interface AmountInterface
 {
-    public function getCurrency() : \coinmonkey\entities\Currency;
+    public function getCoin() : \coinmonkey\entities\Coin;
 
-    public function getSum();
+    public function getGivenAmount();
 }

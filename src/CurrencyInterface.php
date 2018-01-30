@@ -2,7 +2,7 @@
 
 namespace coinmonkey\interfaces;
 
-interface CurrencyInterface
+interface CoinInterface
 {
     public function makeAddress() : array;
 
