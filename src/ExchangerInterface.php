@@ -2,14 +2,14 @@
 
 namespace coinmonkey\interfaces;
 
-use coinmonkey\entities\Amount;
-use coinmonkey\entities\Coin;
+use coinmonkey\interfaces\AmountInterface;
+use coinmonkey\interfaces\CoinInterface;
 
 interface ExchangerInterface
 {
     public function getId() : string;
 
-    public function exchange(Amount $amount, Coin $coin2);
+    public function exchange(AmountInterface $amount, CoinInterface $coin2);
 
     public function buy(string $market, $amount, $rate);
 
@@ -41,11 +41,13 @@ interface ExchangerInterface
 
     public function getFees() : array;
 
-    public function checkDeposit(Amount $amount, int $time);
+    public function checkDeposit(AmountInterface $amount, int $time);
 
-    public function checkWithdraw(Amount $amount, $address, int $time);
+    public function checkWithdraw(AmountInterface $amount, $address, int $time);
 
     public function checkWithdrawById($id, $coin = null);
 
-    public function getMinConfirmations(Coin $coin) : integer;
+    public function getMinConfirmations(CoinInterface $coin) : ?int;
+
+    public function getWithdrawalFee(CoinInterface $coin) : ?float;
 }

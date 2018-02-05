@@ -8,9 +8,7 @@ interface OrderInterface
 
         public function getAddress() : AddressInterface;
 
-        public function getStatus() : AmountInterface;
-
-        public function getGivenAmount() : AmountInterface;
+        public function getAmount() : AmountInterface;
 
         public function getStatus();
 
@@ -18,7 +16,7 @@ interface OrderInterface
 
         public function setAmount($amount);
 
-        public function setCoin(Coin $coin);
+        public function setCoin(CoinInterface $coin);
 
         public function setAddress(AddressInterface $address);
 }

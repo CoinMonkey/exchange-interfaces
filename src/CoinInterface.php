@@ -2,7 +2,9 @@
 
 namespace coinmonkey\interfaces;
 
-interface MarketInterface
+interface CoinInterface
 {
     public function getCode() : string;
+
+    public function getName() : string;
 }

@@ -2,19 +2,22 @@
 
 namespace coinmonkey\interfaces;
 
-use coinmonkey\entities\Coin;
-use coinmonkey\entities\Order;
-use coinmonkey\entities\Amount;
-use coinmonkey\entities\Status;
-use coinmonkey\entities\Order as OrderExchange;
+use coinmonkey\interfaces\CoinInterface;
+use coinmonkey\interfaces\OrderInterface;
+use coinmonkey\interfaces\AmountInterface;
+use coinmonkey\interfaces\OrderInterface as OrderExchange;
 
 interface InstantExchangerInterface
 {
-    public function getEstimateAmount(Amount $amount, Coin $coin2) : Order;
+    public function getEstimateAmount(AmountInterface $amount, CoinInterface $coin2) : AmountInterface;
 
     public function getId() : string;
 
-    public function makeDepositAddress(string $clientAddress, Amount $amount, Coin $coin2) : array;
+    public function makeDepositAddress(string $clientAddress, AmountInterface $amount, CoinInterface $coin2) : array;
 
-    public function getExchangeStatus(OrderExchange $order) : ?integer;
+    public function getExchangeStatus(OrderExchange $order) : ?int;
+
+    public function getMinAmount(CoinInterface $coin, CoinInterface $coin2) : ?int;
+
+    public function getMaxAmount(CoinInterface $coin, CoinInterface $coin2) : ?int;
 }
