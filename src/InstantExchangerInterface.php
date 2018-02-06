@@ -15,7 +15,7 @@ interface InstantExchangerInterface
 
     public function makeDepositAddress(string $clientAddress, AmountInterface $amount, CoinInterface $coin2) : array;
 
-    public function getExchangeStatus(OrderExchange $order) : ?int;
+    public function getExchangeStatus($id) : ?int;
 
     public function getMinAmount(CoinInterface $coin, CoinInterface $coin2) : ?int;
 

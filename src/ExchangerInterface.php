@@ -48,6 +48,4 @@ interface ExchangerInterface
     public function checkWithdrawById($id, $coin = null);
 
     public function getMinConfirmations(CoinInterface $coin) : ?int;
-
-    public function getWithdrawalFee(CoinInterface $coin) : ?float;
 }
