@@ -6,6 +6,7 @@ use coinmonkey\interfaces\CoinInterface;
 use coinmonkey\interfaces\OrderInterface;
 use coinmonkey\interfaces\AmountInterface;
 use coinmonkey\interfaces\OrderInterface as OrderExchange;
+use coinmonkey\entities\Status;
 
 interface InstantExchangerInterface
 {
@@ -15,7 +16,7 @@ interface InstantExchangerInterface
 
     public function makeDepositAddress(string $clientAddress, AmountInterface $amount, CoinInterface $coin2) : array;
 
-    public function getExchangeStatus($id) : ?int;
+    public function getExchangeStatus($id) : Status;
 
     public function getMinAmount(CoinInterface $coin, CoinInterface $coin2) : ?int;
 

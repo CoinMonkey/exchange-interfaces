@@ -2,9 +2,11 @@
 
 namespace coinmonkey\interfaces;
 
+use coinmonkey\interfaces\CoinInterface;
+
 interface OrderInterface
 {
-        public function getCoin(): Coin;
+        public function getCoin(): CoinInterface;
 
         public function getAddress() : AddressInterface;
 

@@ -6,5 +6,5 @@ interface StatusInterface
 {
     public function getStatus() : int;
 
-    public function getTxs() : array
+    public function getTxs() : array;
 }
