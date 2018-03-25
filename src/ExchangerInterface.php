@@ -21,7 +21,7 @@ interface ExchangerInterface
 
     public function getBalances() : array;
 
-    public function getOrder(string $id, $market = '') : ?array;
+    public function getOrder(string $id) : ?array;
 
     public function getBestMake(string $market, $rate, string $direction);
 
